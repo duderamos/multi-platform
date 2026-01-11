@@ -1,0 +1,60 @@
+{
+  "buildx.build.provenance": {
+    "builder": {
+      "id": ""
+    },
+    "buildType": "https://mobyproject.org/buildkit@v1",
+    "materials": [
+      {
+        "uri": "pkg:docker/docker/dockerfile@1",
+        "digest": {
+          "sha256": "b6afd42430b15f2d2a4c5a02b919e98a525b785b1aaff16747d2f623364e39b6"
+        }
+      },
+      {
+        "uri": "pkg:docker/ruby@3.4.2-slim-bookworm?platform=linux%2Famd64",
+        "digest": {
+          "sha256": "342bfeb04d3660045ceba063197d22baafec6b163f019714ddf8fc83c59aabee"
+        }
+      }
+    ],
+    "invocation": {
+      "configSource": {
+        "entryPoint": "Dockerfile"
+      },
+      "parameters": {
+        "frontend": "gateway.v0",
+        "args": {
+          "cmdline": "docker/dockerfile:1",
+          "source": "docker/dockerfile:1"
+        },
+        "locals": [
+          {
+            "name": "context"
+          },
+          {
+            "name": "dockerfile"
+          }
+        ]
+      },
+      "environment": {
+        "platform": "linux/amd64"
+      }
+    }
+  },
+  "buildx.build.ref": "container-builder/container-builder0/bs74vat30zzmsz00m5bram6rq",
+  "containerimage.descriptor": {
+    "mediaType": "application/vnd.oci.image.manifest.v1+json",
+    "digest": "sha256:e9baca398837afa9c49c3094efe09fa175728fd7065a0f27057849247b0684b1",
+    "size": 2197,
+    "annotations": {
+      "org.opencontainers.image.created": "2026-01-11T11:02:11Z"
+    },
+    "platform": {
+      "architecture": "amd64",
+      "os": "linux"
+    }
+  },
+  "containerimage.digest": "sha256:e9baca398837afa9c49c3094efe09fa175728fd7065a0f27057849247b0684b1",
+  "image.name": "docker.io/library/foo:latest"
+}
